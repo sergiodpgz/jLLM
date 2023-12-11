@@ -3,11 +3,49 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package model;
+import java.time.Instant;
 
 /**
  *
  * @author Usuario
  */
 public class Message {
+    
+    private String sender;
+    private long epochSeconds;
+    private String content;
+    
+    
+    public Message (String sender, long epochSeconds, String content) {
+         this.sender = sender;
+         this.epochSeconds = Instant.now().getEpochSecond();
+         this.content = content;    
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public long getEpochSeconds() {
+        return epochSeconds;
+    }
+
+    public void setEpochSeconds(long epochSeconds) {
+        this.epochSeconds = epochSeconds;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+    
+    
     
 }
